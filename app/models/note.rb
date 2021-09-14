@@ -4,4 +4,5 @@ class Note < ApplicationRecord
   validates :note_date, presence: true
   validates :instructor, presence: true
   belongs_to :user, optional: true
+  acts_as_taggable_on :tags
 end
