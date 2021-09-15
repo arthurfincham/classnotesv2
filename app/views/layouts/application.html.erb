@@ -12,12 +12,12 @@
 </head>
 
 <body>
-  <%# DEVISE FLASH MESSAGES %>
-
   <%# SIDEBAR %>
   <div class="container-fluid">
     <div class="row flex-nowrap">
-      <%= render 'shared/sidenav' %>
+      <% if user_signed_in? %>
+        <%= render 'shared/sidenav' %>
+      <% end %>
       <div class="col py-3">
         <%= yield %>
       </div>
