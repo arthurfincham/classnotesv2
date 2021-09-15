@@ -33,6 +33,12 @@
 
 body {
   height: 100vh;
+  background-image: url("noise.png");
+  background-size: 60px 60px;
+  }
+
+td > {
+  background-color: white !important;
 }
 
 .classnotestitle {
@@ -42,6 +48,7 @@ body {
   top: 2vh;
   right: 2%;
   color: #CBCBCB;
+
 }
 
 .classnoteslogo {
@@ -62,6 +69,12 @@ h1, th {
   font-family: 'BiotifBlack' !important;
 }
 
+th > h1 {
+  background-color: white;
+  color: black;
+
+}
+
 h2 {
   font-family: 'BiotifBold' !important;
 }
@@ -73,6 +86,7 @@ h2 {
 
 td {
   font-family: 'BiotifBook' !important;
+  vertical-align: middle;
 
 }
 

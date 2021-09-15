@@ -24,10 +24,8 @@ class NotesController < ApplicationController
 
   def update
     if @note.update(note_params)
-     flash[:notice] = "Note was updated"
       redirect_to root_path
     else
-     flash[:notice] = "Note was not updated"
      render 'edit'
     end
   end
