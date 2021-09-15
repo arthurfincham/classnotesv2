@@ -15,10 +15,15 @@
 <body>
   <%# SIDEBAR %>
 <% if user_signed_in? %>
-<h1 class="classnotestitle">ClassNotes<h1>
  <%= render 'shared/nav2' %>
   <div id="main">
-  <button class="openbtn" onclick="openNav()">&#9776;</button>
+  <div class="topnav">
+    <div class="left-navvers">
+      <button class="openbtn" onclick="openNav()">&#9776;</button>
+      <h1><%= table_header %></h1>
+    </div>
+    <h1 class="classnotestitle">ClassNotes<h1>
+  </div>
   <% end %>
   <%= yield %>
   </div>
