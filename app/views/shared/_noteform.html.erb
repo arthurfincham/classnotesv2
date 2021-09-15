@@ -1,4 +1,4 @@
-<form>
+
 <%= form_for @note do |f| %>
 <div class="form-group">
 <%= f.date_field :note_date, class: "form-control"%>
@@ -10,7 +10,7 @@
 <%= f.text_field :instructor_list, class: "form-control", placeholder: "instructor_list" %>
 </div>
 <div class="form-group">
-<%= f.text_field :tag_list, class: "form-control tagsinput", placeholder: "tag1, tag2" %>
+<%= f.text_field :tag_list, class: "form-control", placeholder: "tag1, tag2" %>
 </div>
 <div class="form-group">
 <%= f.text_field :partners, class: "form-control", placeholder: "partner1, partner2" %>
@@ -23,6 +23,14 @@
     <%= f.text_area :neg_description, class: "form-control", placeholder: "summary of what can be improved" %>
   </div>
 </div>
- <%= f.submit "Save changes" %>
+ <%= f.submit%>
 <% end %>
-</form>
+
+
+<% if @note.errors.any? %>
+    <ul>
+    <% @note.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  <% end %>
