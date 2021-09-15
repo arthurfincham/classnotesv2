@@ -1,1 +1,11 @@
 <h1>notes/index</h1>
+
+<% @notes.each do |note| %>
+<%= note.note_title_list %>
+<%= note.note_date %>
+<%= note.instructor_list %>
+<%= note.tag_list %>
+<%= note.partners %>
+<%= note.pos_description %>
+<%= note.neg_description %>
+<% end %>
