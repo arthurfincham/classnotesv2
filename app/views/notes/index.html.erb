@@ -1,11 +1,24 @@
 <h1>notes/index</h1>
 
-<% @notes.each do |note| %>
-<%= note.note_title_list %>
-<%= note.note_date %>
-<%= note.instructor_list %>
-<%= note.tag_list %>
-<%= note.partners %>
-<%= note.pos_description %>
-<%= note.neg_description %>
-<% end %>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Class</th>
+      <th scope="col">Date</th>
+      <th scope="col">Instructors</th>
+      <th scope="col">Partners</th>
+      <th scope="col">Summary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <% @notes.each do |note| %>
+      <th scope="row"><%= note.note_title_list %></th>
+      <td><%= note.note_date %></td>
+      <td><%= note.instructor_list %></td>
+      <td><%= note.partners %></td>
+      <td><%= note.pos_description %></td>
+    <% end %>
+    </tr>
+  </tbody>
+</table>
