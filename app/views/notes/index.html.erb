@@ -16,9 +16,10 @@
       <th scope="row"><%= note.note_title_list %></th>
       <td><%= format_date(note) %></td>
       <td><%= note.instructor_list %></td>
-      <td><%= note.partners %></td>
+      <td><%= note.partner_list %></td>
       <td><%= note.tag_list %></td>
       <td><%= note.pos_description %></td>
+      <td><%= link_to "view", edit_note_path(note) %></td>
     </tr>
     <% end %>
   </tbody>

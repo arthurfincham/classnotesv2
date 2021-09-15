@@ -1,6 +1,7 @@
 class NotesController < ApplicationController
   before_action :authenticate_user!
   before_action :note_taggers!
+  before_action :set_note, only: [:edit, :update]
   
   def index
   end
@@ -18,10 +19,23 @@ class NotesController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @note.update(note_params)
+     flash[:notice] = "Note was updated"
+      redirect_to root_path
+    else
+     flash[:notice] = "Note was not updated"
+     render 'edit'
+    end
+  end
+
   private
 
   def note_params
-    params.require(:note).permit(:partners, :note_date, :user_id, :pos_description, :neg_description, :created_at, :updated_at, :tag_list, :instructor_list, :note_title_list)
+    params.require(:note).permit(:partners, :note_date, :user_id, :pos_description, :neg_description, :tag_list, :instructor_list, :note_title_list, :partner_list)
   end
 
   def note_taggers!
@@ -35,4 +49,9 @@ class NotesController < ApplicationController
       @notes = current_user.notes.order(params[:sort])
     end
   end
+
+  def set_note
+    @note = Note.find(params[:id])
+  end
+  
 end

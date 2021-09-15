@@ -5,4 +5,5 @@ class Note < ApplicationRecord
   acts_as_taggable_on :tags
   acts_as_taggable_on :instructors
   acts_as_taggable_on :note_titles
+  acts_as_taggable_on :partners
 end
