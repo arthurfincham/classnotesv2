@@ -15,7 +15,7 @@ class NotesController < ApplicationController
     if @note.save
       redirect_to root_path
     else
-      render :create
+      render :new
     end
   end
 

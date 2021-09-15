@@ -3,7 +3,6 @@
   <thead>
     <tr>
       <th scope="col">Class</th>
-      <th scope="col">Date</th>
       <th scope="col">Instructor</th>
       <th scope="col">Partners</th>
       <th scope="col">Tags</th>
@@ -13,11 +12,10 @@
   <tbody>
     <% @notes.each do |note| %>
     <tr>
-      <th scope="row"><%= note.note_title_list %></th>
-      <td><%= format_date(note) %></td>
+      <td><%= format_date(note) %><br><div class="notetitle"><%= format_title(note) %></div></td>
       <td><%= note.instructor_list %></td>
       <td><%= note.partner_list %></td>
-      <td><%= note.tag_list %></td>
+      <td><%= format_tags(note)%></td>
       <td><%= note.pos_description %></td>
       <td><%= link_to "view", edit_note_path(note) %></td>
     </tr>
