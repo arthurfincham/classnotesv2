@@ -57,6 +57,15 @@ td> {
   margin: 0 auto;
 }
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+  #tableheader {
+    font-size: 2.5em;
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
 .classnotestitle {
   font-family: 'BiotifBlack' !important;
   font-size: 2.3em;
@@ -64,6 +73,12 @@ td> {
   position: relative;
   right: 1vw;
   margin: 0;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+  .classnotestitle{
+    display: none;
+  }
 }
 
 .field,
@@ -162,6 +177,7 @@ tr:hover {
   padding-bottom: 2vh;
 }
 
+
 .nav-top-links {
   position: relative;
   top: 0;
@@ -175,6 +191,8 @@ tr:hover {
   color: #818181;
   display: block;
   transition: 0.3s;
+  white-space: nowrap;
+  display: inline;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -190,6 +208,7 @@ tr:hover {
   font-size: 36px;
   margin-left: 50px;
 }
+
 
 /* The button used to open the sidebar */
 .openbtn {
@@ -276,13 +295,20 @@ tr:hover {
 
 }
 
-
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+  .note-form-wrapper{
+    display: flex;
+    flex-direction: column !important;
+  }
+}
 
 .note-form-wrapper {
   width: 80vw;
   margin: 0 auto;
   background-color: white;
 }
+
+
 
 .form_headers {
   display: flex;
@@ -291,11 +317,25 @@ tr:hover {
   align-items: center;
 }
 
+
 .form_headers>* {
   padding: 20px;
   text-align: left;
   width: 25%;
 }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+  .form_headers{
+    flex-direction: column;
+  }
+
+  .form_headers>* {
+    padding: 5px;
+    text-align: left;
+    width: 100%;
+  }
+}
+
 
 .form_headers>*>input {
   width: 100%;
@@ -319,10 +359,46 @@ label {
   justify-content: space-between;
 }
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+  .form_group{
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
 .form_group>* {
   padding: 20px;
   text-align: left;
   width: 50%;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+  .form_group>*>textarea {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+ .form-group > textarea {
+    width: 100%;
+    
+  }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+  .note_pos_description, .note_neg_description{
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+  input.btn{
+    background-color: #FA7F1C;
+    color: white;
+  }
 }
 
 .form_group>*>textarea {
@@ -336,6 +412,12 @@ label {
   padding: 20px;
   text-align: left;
   width: 100%;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+  .tag_list_input {
+    padding: 5px;
+  }
 }
 
 .tag_list_input>*>input {
