@@ -12,8 +12,8 @@
     <% @notes.each do |note| %>
     <tr data-link="<%= edit_note_path(note)%>">
       <td><%= format_date(note) %><br><div class="notetitle"><%= format_title(note) %></div></td>
-      <td><%= note.instructor %></td>
-      <td><%= note.partner %></td>
+      <td class="inst_and_partner"><%= note.instructor%></td>
+      <td class="inst_and_partner"><%= note.partner %></td>
       <td><%= format_tags(note)%></td>
       <td><%= note.pos_description %></td>
     </tr>

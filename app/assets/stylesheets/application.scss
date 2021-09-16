@@ -44,7 +44,6 @@ td> {
   background-color: white !important;
 }
 
-
 .classnoteslogo {
   font-family: 'BiotifBlack' !important;
   font-size: 5em;
@@ -73,7 +72,7 @@ input {
   font-family: 'BiotifBook' !important;
 }
 
-a {}
+
 
 h1,
 th {
@@ -98,11 +97,20 @@ h2 {
 td {
   font-family: 'BiotifBook' !important;
   vertical-align: middle;
-
 }
 
 h1 {
   color: #FA7F1C;
+}
+
+.inst_and_partner{
+  font-size: 1em;;
+}
+
+tr:hover {
+  background-image: url("noise.png");
+  background-size: 100px 100px;
+  text-shadow: 0px 0px 14px #ffffff;
 }
 
 .d-sm-inline {
@@ -225,10 +233,64 @@ h1 {
 
 }
 
-.user-box {
-  width: 40vw;
-  height: auto;
+.sign-in-container {
+  width: 70vw;
+  height: 70vw;
+  margin-bottom: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
+
+.user-box {
+  height: 100%;
+  width: 100%;
+  margin-left: 6vw;
+}
+
+.user_remember_me, .user_remember_me > .form-check {
+  font-size: .5em;
+}
+
+.user-box > a {
+  font-size: .5em;
+}
+
+.new_user > * > label {
+  font-size: 1em;
+}
+
+.user-box > h2 {
+  color: black;
+}
+
+.user-box > a {
+  color: #FA7F1C;
+  font-size: 0.5em;
+}
+
+.user_email > input, .user_password > input {
+  margin: 0 0 10px 0;
+  letter-spacing: 1px;
+  min-height: 6vh;
+}
+
+.new_user > fieldset {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: black;
+}
+
+.new_user > fieldset > .form-check {
+  margin: 5px;
+  font-size: .7em;
+}
+
+.new_user > input {
+  font-size:0.7em;
+}
+
 
 .note-form-wrapper {
   width: 80vw;
@@ -317,4 +379,8 @@ label {
   margin-bottom: 3vh;
   background-image: url("noise.png");
   background-size: 100px 100px;
+}
+
+.nav-tag a {
+  font-size: 1em;
 }

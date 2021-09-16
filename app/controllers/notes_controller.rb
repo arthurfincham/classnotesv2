@@ -1,13 +1,10 @@
 class NotesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_note, only: [:edit, :update, :destroy, :show]
+  before_action :set_notes
   
   def index
-    if params[:tag]
-      @notes = current_user.notes.tagged_with(params[:tag]).order(params[:sort])
-    else
-      @notes = current_user.notes.order(params[:sort])
-    end
+    
   end
 
   def new
@@ -49,6 +46,14 @@ class NotesController < ApplicationController
 
   def note_params
     params.require(:note).permit(:note_date, :note_title, :instructor, :tag_list, :partner, :pos_description, :neg_description)
+  end
+
+  def set_notes
+    if params[:tag]
+      @notes = current_user.notes.tagged_with(params[:tag]).order(params[:sort])
+    else
+      @notes = current_user.notes.order(params[:sort])
+    end
   end
 
   def set_note
