@@ -30,31 +30,40 @@
   src: url('app/assets/fonts/Biotif-Book.ttf');
 }
 
+table {
+  width: 80vw !important;
+  margin: 0 auto !important;
+}
 
 body {
   height: 100vh;
-  background-image: url("noise.png");
-  background-size: 60px 60px;
+  
   }
 
 td > {
   background-color: white !important;
 }
 
-.classnotestitle {
-  font-family: 'BiotifBlack' !important;
-  font-size: 2.3em;
-  position: absolute;
-  top: 2vh;
-  right: 2%;
-  color: #CBCBCB;
-
-}
 
 .classnoteslogo {
   font-family: 'BiotifBlack' !important;
   font-size: 5em;
   color: black;
+}
+
+#tableheader {
+  font-size: 3em;
+  position: relative;
+  margin: 0 auto;
+}
+
+.classnotestitle {
+  font-family: 'BiotifBlack' !important;
+  font-size: 2.3em;
+  color: #CBCBCB;
+  position: relative;
+  right: 1vw;
+  margin: 0;
 }
 
 .field, a, input {
@@ -166,19 +175,20 @@ h1 {
 
 /* The button used to open the sidebar */
 .openbtn {
-  font-size: 30px;
+  font-size: 40px;
   cursor: pointer;
   color: black;
-  padding: 10px 15px;
+  padding: 10px;
   border: none;
-  background-color: white;
+  background: none;
+  padding-top: 5px;
 }
 
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   transition: margin-left .5s; /* If you want a transition effect */
-  padding: 20px;
+  padding: 10px;
   padding-top: 0 !important;
 }
 
@@ -205,4 +215,88 @@ h1 {
 
 .note-form-wrapper{
   width: 80vw;
+  margin: 0 auto;
+}
+
+.form_headers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form_headers > * {
+  padding: 20px;
+  text-align: left;
+  width: 25%;
+}
+
+.form_headers > * > input {
+  width: 100%;
+  margin: 0;
+  min-height: 5vh;
+  font-family: 'BiotifBlack' !important;
+  font-size: 1.6em;
+}
+
+label {
+  font-family: 'BiotifBold';
+  color: #cacaca;
+  font-size: 1.5em;
+}
+
+
+.form_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form_group > * {
+  padding: 20px;
+  text-align: left;
+  width: 50%;
+}
+
+.form_group > * > textarea {
+  margin: 0;
+  min-height: 20vh;
+  font-family: 'BiotifBook' !important;
+  font-size: 1.1em;
+}
+
+.tag_list_input {
+  padding: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.tag_list_input > * > input {
+  margin: 0;
+  min-height: 5vh;
+  font-family: 'BiotifBold' !important;
+  font-size: 1.2em;
+}
+
+#note_note_date {
+  border: none;
+  flex-direction: row-reverse;
+  padding: 5px;
+  font-size: 1.5em;
+  min-height: 10vh;
+  font-family: 'BiotifBold' !important;
+}
+
+.topnav {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 1vh;
+
+  width: 100%;
+  height: 7vh;
+  margin-bottom: 3vh;
+  background-image: url("noise.png");
+  background-size: 100px 100px;
 }

@@ -1,12 +1,18 @@
 <div class="note-form-wrapper">
-<%= simple_form_for @note do |f| %>
-  <%= f.date_field :note_date %>
-  <%= f.input :note_title %>
-  <%= f.input :instructor %>
-  <%= f.input :tag_list %>
-  <%= f.input :partner %>
-  <%= f.input :pos_description, as: :text %>
-  <%= f.input :neg_description, as: :text %>
+  <%= simple_form_for @note do |f| %>
+  <div class="form_headers">
+    <%= f.date_field :note_date %>
+    <%= f.input :note_title, label: 'class'%>
+    <%= f.input :instructor, label: 'instructor'%>
+    <%= f.input :partner, label: 'partner'%>
+  </div>
+  <div class="tag_list_input">
+  <%= f.input :tag_list, label: 'tags' %>
+  </div>
+  <div class="form_group">
+    <%= f.input :pos_description, as: :text, label: 'what went well?' %>
+    <%= f.input :neg_description, as: :text, label: 'what needs work?' %>
+  </div>
   <%= f.button :submit %>
-<% end %>
+  <% end %>
 </div>

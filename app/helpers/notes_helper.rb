@@ -8,6 +8,8 @@ module NotesHelper
     url = request.path_info
     if url.include? 'tags'
       request[:tag].parameterize(separator: '_')
+    elsif url.include? 'notes/new'
+      "New Note"
     else
       "All Notes"
     end
