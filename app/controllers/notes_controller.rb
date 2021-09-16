@@ -1,9 +1,13 @@
 class NotesController < ApplicationController
   before_action :authenticate_user!
-  before_action :note_taggers!
-  before_action :set_note, only: [:edit, :update]
+  before_action :set_note, only: [:edit, :update, :destroy, :show]
   
   def index
+    if params[:tag]
+      @notes = current_user.notes.tagged_with(params[:tag]).order(params[:sort])
+    else
+      @notes = current_user.notes.order(params[:sort])
+    end
   end
 
   def new
@@ -12,6 +16,7 @@ class NotesController < ApplicationController
 
   def create
     @note = current_user.notes.new(note_params)
+    @note.user = current_user
     if @note.save
       redirect_to root_path
     else
@@ -26,26 +31,24 @@ class NotesController < ApplicationController
     if @note.update(note_params)
       redirect_to root_path
     else
-     render 'edit'
-    end
+      flash[:notice] = "note was not updated"
+      render 'edit'
+    end 
   end
+
+  def show
+  end
+
+  def destroy
+    @note.destroy
+    flash[:notice] = "Note was deleted"
+    redirect_to root_path
+   end
 
   private
 
   def note_params
-    params.require(:note).permit(:partners, :note_date, :user_id, :pos_description, :neg_description, :tag_list, :instructor_list, :note_title_list, :partner_list)
-  end
-
-  def note_taggers!
-    if params[:tag]
-      @notes = current_user.notes.tagged_with(params[:tag]).order(params[:sort])
-    elsif params[:instructor]
-      @notes = current_user.notes.tagged_with(params[:instructor]).order(params[:sort])
-    elsif params[:note_title]
-      @notes = current_user.notes.tagged_with(params[:note_title]).order(params[:sort])
-    else
-      @notes = current_user.notes.order(params[:sort])
-    end
+    params.require(:note).permit(:note_date, :note_title, :instructor, :tag_list, :partner, :pos_description, :neg_description)
   end
 
   def set_note

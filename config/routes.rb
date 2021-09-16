@@ -3,6 +3,4 @@ Rails.application.routes.draw do
   resources :notes, only: [:new, :create, :edit, :update]
   root to: "notes#index"
   get 'tags/:tag', to: 'notes#index', as: :tag
-  get 'instructors/:instructor', to: 'notes#index', as: :instructor
-  get 'note_titles/:note_title', to: 'notes#index', as: :note_title
 end

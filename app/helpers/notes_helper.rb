@@ -8,19 +8,15 @@ module NotesHelper
     url = request.path_info
     if url.include? 'tags'
       request[:tag].parameterize(separator: '_')
-    elsif url.include? 'instructors'
-      request[:instructor].parameterize(separator: '_')
-    elsif url.include? 'note_titles'
-      request[:note_title].parameterize(separator: '_')
     else
       "All Notes"
     end
   end
 
   def format_title(note)
-    note.note_title_list.map do |title|
-      title.parameterize(separator: '_').downcase
-    end[0]
+    if note.note_title
+      note.note_title.parameterize(separator: '_').downcase
+    end
   end
 
   def format_tags(note)
