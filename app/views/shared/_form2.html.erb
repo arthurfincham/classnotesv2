@@ -1,0 +1,12 @@
+<div class="note-form-wrapper">
+<%= simple_form_for @note do |f| %>
+  <%= f.date_field :note_date %>
+  <%= f.input :note_title %>
+  <%= f.input :instructor %>
+  <%= f.input :tag_list %>
+  <%= f.input :partner %>
+  <%= f.input :pos_description, as: :text %>
+  <%= f.input :neg_description, as: :text %>
+  <%= f.button :submit %>
+<% end %>
+</div>
