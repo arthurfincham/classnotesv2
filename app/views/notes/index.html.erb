@@ -10,13 +10,12 @@
   </thead>
   <tbody>
     <% @notes.each do |note| %>
-    <tr>
+    <tr data-link="<%= edit_note_path(note)%>">
       <td><%= format_date(note) %><br><div class="notetitle"><%= format_title(note) %></div></td>
       <td><%= note.instructor %></td>
       <td><%= note.partner %></td>
       <td><%= format_tags(note)%></td>
       <td><%= note.pos_description %></td>
-      <td><%= link_to "view", edit_note_path(note) %></td>
     </tr>
     <% end %>
   </tbody>

@@ -15,3 +15,11 @@ import "animate.css"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+
+$(document).ready(function () {
+
+  $("tr[data-link]").click(function() {
+    window.location = $(this).data("link")
+  });
+});
