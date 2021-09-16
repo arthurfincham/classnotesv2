@@ -202,6 +202,49 @@ tr:hover {
   padding-top: 5px;
 }
 
+.user-box {
+  min-width: 40vw;
+}
+
+.user-box > h2 {
+  color: black;
+}
+
+.form-check {
+  font-size: 12px;
+}
+
+#user_email, #user_password{
+  margin: 0;
+}
+
+#user_password {
+  margin-top: 15px;
+  margin-bottom: 18px;
+}
+
+.button-box-sign  > * {
+  font-size: 20px;
+}
+
+.button-box-sign > input {
+  width: 100px;
+  margin: 10px 15px 20px 0;
+}
+
+.button-box-sign > a {
+  color: #FA7F1C;
+}
+
+.button-box-sign > a:hover {
+  color: black;
+}
+
+.button-box-sign {
+  display: flex;
+  flex-direction: column;
+  line-height: 2.5vh;
+}
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
@@ -233,63 +276,6 @@ tr:hover {
 
 }
 
-.sign-in-container {
-  width: 70vw;
-  height: 70vw;
-  margin-bottom: 10vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.user-box {
-  height: 100%;
-  width: 100%;
-  margin-left: 6vw;
-}
-
-.user_remember_me, .user_remember_me > .form-check {
-  font-size: .5em;
-}
-
-.user-box > a {
-  font-size: .5em;
-}
-
-.new_user > * > label {
-  font-size: 1em;
-}
-
-.user-box > h2 {
-  color: black;
-}
-
-.user-box > a {
-  color: #FA7F1C;
-  font-size: 0.5em;
-}
-
-.user_email > input, .user_password > input {
-  margin: 0 0 10px 0;
-  letter-spacing: 1px;
-  min-height: 6vh;
-}
-
-.new_user > fieldset {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: black;
-}
-
-.new_user > fieldset > .form-check {
-  margin: 5px;
-  font-size: .7em;
-}
-
-.new_user > input {
-  font-size:0.7em;
-}
 
 
 .note-form-wrapper {
