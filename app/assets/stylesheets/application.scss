@@ -45,7 +45,7 @@ th {
 }
 
 
-@media only screen and (min-device-width : 480) {
+@media only screen and (min-device-width : 480px) {
 table {
   width: 90vw !important;
   margin: 0 auto !important;
@@ -67,7 +67,7 @@ td> {
   color: black;
 }
 
-@media only screen and (min-device-width : 480) {
+@media only screen and (min-device-width : 480px) {
 .classnoteslogo {
   font-family: 'BiotifBlack' !important;
   font-size: 5em;
@@ -92,7 +92,7 @@ a.nav-tag {
 
 }
 
-@media only screen and (min-device-width : 480) {
+@media only screen and (min-device-width : 480px) {
   #tableheader {
     font-size: 3em;
     position: relative;
@@ -114,8 +114,6 @@ a.nav-tag {
     display: block;
     font-size: 2.3em;
     color: #CBCBCB;
-    position: relative;
-    right: 1vw;
     margin: 0;
   }
 }
@@ -129,7 +127,10 @@ input {
   font-family: 'BiotifBook' !important;
 }
 
-
+h5 {
+  font-family: "BiotifBold";
+  color: #818181;
+}
 
 h1,
 th {
@@ -168,8 +169,8 @@ h1 {
   ;
 }
 
-tr:hover {
-  background-image: url("noise.png");
+.index-table-rows:hover {
+  background-image: url("orangenoise.png");
   background-size: 100px 100px;
   text-shadow: 0px 0px 14px #ffffff;
 }
@@ -270,13 +271,23 @@ tr:hover {
   padding-top: 5px;
 }
 
-@media only screen and (min-device-width : 480) {
+#emptydiv{
+font-size: 30px;
+cursor: pointer;
+color: black;
+padding: 10px;
+border: none;
+background: none;
+padding-top: 5px;
+}
+
+@media only screen and (min-device-width : 480px) {
   #emptydiv{
-    display: none;
+    display: none !important;
   }
 }
 
-@media only screen and (min-device-width : 480) {
+@media only screen and (min-device-width : 480px) {
 .openbtn {
   font-size: 40px;
   cursor: pointer;
@@ -290,7 +301,7 @@ tr:hover {
 
 
 
-@media only screen and (min-device-width : 480) {
+@media only screen and (min-device-width : 480px) {
 .user-box {
   width: 30vw;
   max-width: 500px;
@@ -306,18 +317,22 @@ tr:hover {
 }
 
 #user_email,
-#user_password {
+#user_password, #user_password_confirmation {
    margin: 0;
    width: 80vw;
 }
 
 
-@media only screen and (min-device-width : 480) {
+@media only screen and (min-device-width : 480px) {
 #user_email,
-#user_password {
+#user_password, #user_password_confirmation  {
   margin: 0;
-  width: 10vw;
+  width: 30vw;
   };
+}
+
+#user_password_confirmation {
+  margin-bottom: 18px;
 }
 
 #user_password {
@@ -349,11 +364,12 @@ tr:hover {
   line-height: 2.5vh;
 }
 
-@media only screen and (min-device-width : 480) {
+@media only screen and (min-device-width : 480px) {
 .button-box-sign {
   display: flex;
   flex-direction: column;
   line-height: 2.5vh;
+  width: 30vw;
 }
 }
 
@@ -495,6 +511,12 @@ label {
   padding-right: 0;
 }
 
+@media only screen and (min-device-width : 480px) {
+  .note_neg_description{
+    margin-left: 10px !important;
+  }
+}
+
 // form2 submit button
 
 input.btn {
@@ -504,6 +526,14 @@ input.btn {
 }
 
 
+#delete-note {
+  background-color: #FA7F1C;
+  color: white;
+  margin-top: 2vh;
+  width: auto;
+}
+  
+
 .form_group>*>textarea {
   margin: 0;
   min-height: 20vh;
@@ -512,7 +542,7 @@ input.btn {
 }
 
 .tag_list_input {
-  padding: 5px;
+  padding: 5px 0 5px 0 !important;
 }
 
 @media only screen and (min-device-width : 480px) {
@@ -559,6 +589,7 @@ input.btn {
   display: flex;
   width: 100%;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   padding-top: 1vh;
   width: 100%;
@@ -592,11 +623,6 @@ input.btn {
   margin: 0 2px 0 2px;
   padding: 1px 2px 1px 2px;
   border: none;
-  background: repeating-linear-gradient(
-  45deg,
-  #ffffff,
-  #ffffff 2px,
-  #ffcba4 2px,
-  #ffcba4 4px);
+  background-color: white;
   font-family: 'BiotifBold';
 }

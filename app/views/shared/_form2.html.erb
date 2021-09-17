@@ -7,12 +7,16 @@
     <%= f.input :partner, label: 'partner'%>
   </div>
   <div class="tag_list_input">
-  <%= f.input :tag_list, label: 'tags' %>
+  <%= f.input :tag_list, label: 'tags (seperated by commas)'%>
   </div>
   <div class="form_group">
     <%= f.input :pos_description, as: :text, label: 'what went well?' %>
     <%= f.input :neg_description, as: :text, label: 'what needs work?' %>
   </div>
-  <%= f.button :submit %>
+  <%= f.button :submit %><br>
+  <% if request.path_info.include? 'notes' && 'edit' %>
+  <%= link_to "Delete", note_path(@note), method: :delete, data: {confirm: "Are you sure?"}, class: "btn", id: "delete-note"%>
   <% end %>
+  <% end %>
+  
 </div>

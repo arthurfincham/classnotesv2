@@ -41,7 +41,6 @@ class NotesController < ApplicationController
     flash[:notice] = "Note was deleted"
     redirect_to root_path
    end
-
   private
 
   def note_params
@@ -50,10 +49,11 @@ class NotesController < ApplicationController
 
   def set_notes
     if params[:tag]
-      @notes = current_user.notes.tagged_with(params[:tag]).order(params[:sort])
+      @notes = current_user.notes.tagged_with(params[:tag]).order(note_date: :desc)
     else
-      @notes = current_user.notes.order(params[:sort])
+      @notes = current_user.notes.order(note_date: :desc)
     end
+    @all_notes = current_user.notes.all
   end
 
   def set_note

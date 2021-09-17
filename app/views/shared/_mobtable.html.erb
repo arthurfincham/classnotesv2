@@ -15,8 +15,8 @@
     <tr data-link="<%= edit_note_path(note)%>">
       <td class="table-vert-line"><%= format_date(note) %><br><p class="notetitle"><%= format_title(note)%></p><%= note.instructor.downcase%></td>
       <td><%= note.pos_description %><br><br><% format_tags(note).each do |tag| %>
-        <button class="tag-badge"><%= tag %></button>
-      <% end %></td>
+        <button class="tag-badge"><%= "##{tag}" %></button>
+      <% end %></td> 
     </tr>
     <% end %>
   </tbody>

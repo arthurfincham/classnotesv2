@@ -13,7 +13,7 @@
        <% end %>
      </li>
 
-     <% tag_cloud @notes.tag_counts.order("tags.name"), %w[m] do |tag| %>
+     <% @all_notes.tag_counts.order("tags.name").each do |tag| %>
      <li class="nav-item">
        <%= link_to "##{tag.name.parameterize(separator: '_')}", tag_path(tag.name), class: "nav-tag" %></li>
      <% end %>
