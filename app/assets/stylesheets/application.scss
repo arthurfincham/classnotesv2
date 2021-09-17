@@ -31,9 +31,26 @@
 }
 
 table {
+  margin-top: 1vh;
+  margin-right: 5vw;
+}
+
+.table-vert-line {
+  border-right: 1px solid rgb(214, 214, 214);
+}
+
+th {
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+
+@media only screen and (min-device-width : 480) {
+table {
   width: 90vw !important;
   margin: 0 auto !important;
   background-color: white;
+}
 }
 
 body {
@@ -46,40 +63,65 @@ td> {
 
 .classnoteslogo {
   font-family: 'BiotifBlack' !important;
-  font-size: 5em;
+  font-size: 4em;
   color: black;
 }
 
-#tableheader {
-  font-size: 3em;
-  position: relative;
-  display: block;
-  margin: 0 auto;
+@media only screen and (min-device-width : 480) {
+.classnoteslogo {
+  font-family: 'BiotifBlack' !important;
+  font-size: 5em;
+  color: black;
+}
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+ul, li{
+  list-style-type: none;
+}
+
+a.nav-tag {
+  padding-left: 0 !important;
+}
+
+#tableheader {
+  font-size: 2.5em;
+  position: relative;
+  text-align: center;
+  margin-bottom: 0;
+  white-space: nowrap;
+
+}
+
+@media only screen and (min-device-width : 480) {
   #tableheader {
-    font-size: 2.5em;
+    font-size: 3em;
     position: relative;
-    width: 50%;
+    display: block;
     margin: 0 auto;
+    text-align: center;
   }
 }
+
+
 
 .classnotestitle {
-  font-family: 'BiotifBlack' !important;
-  font-size: 2.3em;
-  color: #CBCBCB;
-  position: relative;
-  right: 1vw;
-  margin: 0;
+  display: none;
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
-  .classnotestitle{
-    display: none;
+@media only screen and (min-device-width : 480px) {
+  .classnotestitle {
+    font-family: 'BiotifBlack' !important;
+    display: block;
+    font-size: 2.3em;
+    color: #CBCBCB;
+    position: relative;
+    right: 1vw;
+    margin: 0;
   }
 }
+
+
+
 
 .field,
 a,
@@ -104,10 +146,13 @@ h2 {
   font-family: 'BiotifBold' !important;
 }
 
-.notetitle {
-  font-family: 'BiotifBold' !important;
-  font-size: 1.5em;
-}
+
+  .notetitle {
+    font-family: 'BiotifBold' !important;
+    font-size: 1.5em;
+    margin: 0;
+  }
+
 
 td {
   font-family: 'BiotifBook' !important;
@@ -118,8 +163,9 @@ h1 {
   color: #FA7F1C;
 }
 
-.inst_and_partner{
-  font-size: 1em;;
+.inst_and_partner {
+  font-size: 1em;
+  ;
 }
 
 tr:hover {
@@ -175,12 +221,15 @@ tr:hover {
   position: relative;
   bottom: 0;
   padding-bottom: 2vh;
+  line-height: 4vh;
 }
 
 
 .nav-top-links {
   position: relative;
   top: 0;
+  overflow-y: scroll;
+  line-height: 4vh;
 }
 
 /* The sidebar links */
@@ -212,7 +261,7 @@ tr:hover {
 
 /* The button used to open the sidebar */
 .openbtn {
-  font-size: 40px;
+  font-size: 30px;
   cursor: pointer;
   color: black;
   padding: 10px;
@@ -221,11 +270,34 @@ tr:hover {
   padding-top: 5px;
 }
 
-.user-box {
-  min-width: 40vw;
+@media only screen and (min-device-width : 480) {
+  #emptydiv{
+    display: none;
+  }
 }
 
-.user-box > h2 {
+@media only screen and (min-device-width : 480) {
+.openbtn {
+  font-size: 40px;
+  cursor: pointer;
+  color: black;
+  padding: 10px;
+  border: none;
+  background: none;
+  padding-top: 5px;
+}
+}
+
+
+
+@media only screen and (min-device-width : 480) {
+.user-box {
+  width: 30vw;
+  max-width: 500px;
+}
+}
+
+.user-box>h2 {
   color: black;
 }
 
@@ -233,8 +305,19 @@ tr:hover {
   font-size: 12px;
 }
 
-#user_email, #user_password{
+#user_email,
+#user_password {
+   margin: 0;
+   width: 80vw;
+}
+
+
+@media only screen and (min-device-width : 480) {
+#user_email,
+#user_password {
   margin: 0;
+  width: 10vw;
+  };
 }
 
 #user_password {
@@ -242,27 +325,36 @@ tr:hover {
   margin-bottom: 18px;
 }
 
-.button-box-sign  > * {
-  font-size: 20px;
+.button-box-sign>* {
+  font-size: 15px;
 }
 
-.button-box-sign > input {
+.button-box-sign>input {
   width: 100px;
   margin: 10px 15px 20px 0;
 }
 
-.button-box-sign > a {
+.button-box-sign>a {
   color: #FA7F1C;
 }
 
-.button-box-sign > a:hover {
+.button-box-sign>a:hover {
   color: black;
 }
 
 .button-box-sign {
   display: flex;
   flex-direction: column;
+  width: 80vw;
   line-height: 2.5vh;
+}
+
+@media only screen and (min-device-width : 480) {
+.button-box-sign {
+  display: flex;
+  flex-direction: column;
+  line-height: 2.5vh;
+}
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
@@ -274,15 +366,18 @@ tr:hover {
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+.sidebar a {
+  font-size: 18px;
+}
+
 @media screen and (max-height: 450px) {
   .sidebar {
     padding-top: 15px;
   }
-
-  .sidebar a {
-    font-size: 18px;
-  }
 }
+
+
 
 .sign-up-page-body {
   width: 100vw;
@@ -295,45 +390,48 @@ tr:hover {
 
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
-  .note-form-wrapper{
-    display: flex;
-    flex-direction: column !important;
+.note-form-wrapper {
+  display: flex;
+  flex-direction: column !important;
+}
+
+@media only screen and (min-device-width : 480px) {
+  .note-form-wrapper {
+    width: 80vw;
+    margin: 0 auto;
+    background-color: white;
   }
 }
-
-.note-form-wrapper {
-  width: 80vw;
-  margin: 0 auto;
-  background-color: white;
-}
-
 
 
 .form_headers {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
 }
-
 
 .form_headers>* {
-  padding: 20px;
+  padding: 5px;
   text-align: left;
-  width: 25%;
+  width: 100%;
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
-  .form_headers{
-    flex-direction: column;
+@media only screen and (min-device-width : 480px) {
+
+
+  .form_headers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
+
   .form_headers>* {
-    padding: 5px;
+    padding: 20px;
     text-align: left;
-    width: 100%;
+    width: 25%;
   }
+
+
 }
 
 
@@ -353,53 +451,58 @@ label {
 
 
 
+
+
+
 .form_group {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
-  .form_group{
-    flex-direction: column;
-    width: 100%;
+@media only screen and (min-device-width :480px){
+
+  .form_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
-.form_group>* {
-  padding: 20px;
-  text-align: left;
-  width: 50%;
-}
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
-  .form_group>*>textarea {
-    width: 100%;
+@media only screen and (min-device-width : 480px) {
+  .form_group>* {
+    padding: 20px;
+    text-align: left;
+    width: 50%;
   }
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
- .form-group > textarea {
-    width: 100%;
-    
-  }
-}
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
-  .note_pos_description, .note_neg_description{
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-  }
+.form_group>*>textarea {
+  width: 100%;
 }
 
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
-  input.btn{
-    background-color: #FA7F1C;
-    color: white;
-  }
+
+.form-group>textarea {
+  width: 100%;
+
 }
+
+
+.note_pos_description,
+.note_neg_description {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// form2 submit button
+
+input.btn {
+  background-color: #FA7F1C;
+  color: white;
+  margin-top: 2vh;
+}
+
 
 .form_group>*>textarea {
   margin: 0;
@@ -409,16 +512,18 @@ label {
 }
 
 .tag_list_input {
-  padding: 20px;
-  text-align: left;
-  width: 100%;
+  padding: 5px;
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+@media only screen and (min-device-width : 480px) {
   .tag_list_input {
-    padding: 5px;
+    padding: 20px;
+    text-align: left;
+    width: 100%;
   }
 }
+
+
 
 .tag_list_input>*>input {
   margin: 0;
@@ -440,6 +545,20 @@ label {
   display: flex;
   width: 100%;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1vh;
+  width: 100%;
+  height: 8vh;
+  background-image: url("noise.png");
+  background-size: 100px 100px;
+}
+
+@media only screen and (min-device-width : 480px) {
+.topnav {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
   align-items: center;
   padding-top: 1vh;
   width: 100%;
@@ -448,7 +567,36 @@ label {
   background-image: url("noise.png");
   background-size: 100px 100px;
 }
+}
 
 .nav-tag a {
   font-size: 1em;
+}
+
+
+#fixedheight-table {
+  table-layout: fixed;
+}
+
+#fixedheight-table td, #fixedheight-table td div {
+  height: 6vh;
+  min-height: 6vh;
+  overflow: hidden;
+}
+
+.tag-holder {
+  display: inline-block;
+}
+
+.tag-badge{
+  margin: 0 2px 0 2px;
+  padding: 1px 2px 1px 2px;
+  border: none;
+  background: repeating-linear-gradient(
+  45deg,
+  #ffffff,
+  #ffffff 2px,
+  #ffcba4 2px,
+  #ffcba4 4px);
+  font-family: 'BiotifBold';
 }

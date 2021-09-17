@@ -31,7 +31,8 @@ module NotesHelper
   def format_tags(note)
     note.tag_list.map do |tag|
       tag.parameterize(separator: '_').downcase
-    end.join(", ")
+    end
   end
 
 end
+

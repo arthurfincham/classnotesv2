@@ -1,0 +1,24 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"><h1>Class</h1></th>
+      <th scope="col"><h1>Instructor</h1></th>
+      <th scope="col"><h1>Partner</h1></th>
+      <th scope="col"><h1>Tags</h1></th>
+      <th scope="col"><h1>Summary</h1></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @notes.each do |note| %>
+    <tr data-link="<%= edit_note_path(note)%>">
+      <td><%= format_date(note) %><br><div class="notetitle"><%= format_title(note) %></div></td>
+      <td class="inst_and_partner"><%= note.instructor%></td>
+      <td class="inst_and_partner"><%= note.partner %></td>
+      <td><% format_tags(note).each do |tag| %>
+        <button class="tag-badge"><%= tag %></button>
+      <% end %></td>
+      <td><%= note.pos_description %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
