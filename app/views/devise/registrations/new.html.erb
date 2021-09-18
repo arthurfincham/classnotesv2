@@ -1,5 +1,6 @@
 <div class="sign-up-page-body">
 <h1 class="classnoteslogo">ClassNotes<h1>
+<%= render 'shared/messages' %>
 <div class="user-box">
   <h2>Sign up</h2>
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>

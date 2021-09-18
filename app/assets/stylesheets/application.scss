@@ -627,3 +627,10 @@ input.btn {
   background-color: white;
   font-family: 'BiotifBold';
 }
+
+@media only screen and (min-device-width : 480px) {
+  .error-box {
+    width: 30vw;
+    max-width: 500px;
+  }
+  }
