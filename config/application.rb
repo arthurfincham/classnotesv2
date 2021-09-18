@@ -10,8 +10,8 @@ module ClassnotesV2
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
-
     # Configuration for the application, engines, and railties goes here.
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
     #
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
