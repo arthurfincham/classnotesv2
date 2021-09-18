@@ -36,4 +36,5 @@ yarn-debug.log*
 .yarn-integrity
 .database.yml
 vendor/bundle/
-/tmp
+/tmp.env
+.env
