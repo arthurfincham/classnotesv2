@@ -4,12 +4,13 @@
 ![](https://img.shields.io/github/languages/code-size/arthurfincham/classnotesv2)
 
 ## :bulb: Overview
+<img src="app/assets/gifs/mobile_gif.gif" width="auto" height="320" align="right"/>
 One of my hobbies is Brazilian Jiu Jitsu, a martial art which depends on the accumilation of knowledge and skill. A problem, however, is how to keep track of all this knowledge. Enter Classnotes: a simple, lightweight journal to accompany learning. The idea is that after class you can write down what you learned, tag it, and then build a repository of techniques and ideas that can be quickly accessed.
 ## :eye: Preview 
 
-Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-![](app/assets/gifs/desktop_gif.gif)   |  <img src="app/assets/gifs/mobile_gif.gif" height="350"/>
+![](app/assets/gifs/desktop_gif.gif)
+
+
 
 
 
