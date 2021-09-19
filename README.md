@@ -11,10 +11,13 @@ One of my hobbies is Brazilian Jiu Jitsu, a martial art which depends on the acc
 ## :eye: Preview 
 
 <img src="app/assets/gifs/desktop_gif.gif" align="left"/>
+<hr>
+<br>
+
+## :hammer: Built with
 
 <img src="app/assets/gifs/mobile_gif.gif" width="auto" height="320" align="right"/>
 
-## :hammer: Built with
 * [Bootstrap](https://getbootstrap.com) - framework for building responsive sites with extensive components.
 * [Ruby on Rails](https://rubyonrails.org) - server-side web app framework written in Ruby. 
 * [Heroku](https://www.heroku.com) - service which allows developers to deploy applications.
