@@ -10,8 +10,8 @@
   <%= f.input :tag_list, label: 'tags (seperated by commas)'%>
   </div>
   <div class="form_group">
-    <%= f.input :pos_description, as: :text, label: 'what went well?' %>
-    <%= f.input :neg_description, as: :text, label: 'what needs work?' %>
+    <%= f.input :pos_description, as: :text, label: 'technique' %>
+    <%= f.input :neg_description, as: :text, label: 'sparring' %>
   </div>
   <%= f.button :submit %><br>
   <% if request.path_info.include? 'notes' && 'edit' %>
