@@ -10,11 +10,13 @@ One of my hobbies is Brazilian Jiu Jitsu, a martial art which depends on the acc
 
 ## :eye: Preview 
 
-<img src="app/assets/gifs/desktop_gif.gif" align="left" style="margin-bottom:30px"/>
+<img src="app/assets/gifs/desktop_gif.gif" align="left"/>
 
-<img src="app/assets/gifs/mobile_gif.gif" width="auto" height="350" align="right"/>
+----------------------------------------------------------------
 
 ## :hammer: Built with
+
+<img src="app/assets/gifs/mobile_gif.gif" align="right"/>
 
 
 * [Bootstrap](https://getbootstrap.com) - framework for building responsive sites with extensive components.
