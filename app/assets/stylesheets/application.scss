@@ -379,13 +379,7 @@ a.nav-tag {
 
 // Empty div to flex center title 
 #emptydiv {
-  font-size: 30px;
-  cursor: pointer;
-  color: black;
-  padding: 10px;
-  border: none;
-  background: none;
-  padding-top: 5px;
+  width: 47px;
 }
 
 @media only screen and (min-device-width: 480px) {
@@ -409,13 +403,15 @@ a.nav-tag {
   }
 }
 
+// Replaces ClassNotes title when split screen
+
 .title-replacement {
-  width: 193px;
+  display: none;
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (max-width: 760px) {
   .title-replacement {
-    display: none;
+    width: 193px;
   }
 }
 /* #endregion */
