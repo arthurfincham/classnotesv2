@@ -12,7 +12,7 @@
     <tr data-link="<%= edit_note_path(note)%>", class= "index-table-rows">
       <td><%= format_date(note) %><br><div class="notetitle"><%= format_title(note) %></div><div class="index-instructor"><%= note.instructor.downcase%></td>
       <td><% format_tags(note).each do |tag| %>
-        <button class="tag-badge"><%= "##{tag}" %></button>
+        <button class="tag-badge"><%= "##{tag}" %></button><br>
       <% end %></td>
       <td><%= truncate(note.pos_description, :length => 200, :separator => '') %></td>
       <td><%= truncate(note.neg_description, :length => 200, :separator => '') %></td>  
