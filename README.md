@@ -1,4 +1,4 @@
-
+![](app/assets/images/cnbanner.png)
 ![](https://img.shields.io/github/last-commit/arthurfincham/classnotesv2)
 ![](https://img.shields.io/github/languages/count/arthurfincham/classnotesv2)
 ![](https://img.shields.io/github/languages/code-size/arthurfincham/classnotesv2)
