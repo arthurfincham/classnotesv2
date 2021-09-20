@@ -32,3 +32,6 @@ One of my hobbies is Brazilian Jiu Jitsu, a martial art which depends on the acc
 * [pg](https://github.com/ged/ruby-pg): PostgreSQL gem for Rails.  
 * [acts-as-taggable-on](https://github.com/mbleigh/acts-as-taggable-on): gem for tagging models in Rails.
 * [awesome_print](https://github.com/awesome-print/awesome_print): very helpful when working with the rails console.  
+## :clipboard: Testing
+* [rspec-rails](https://github.com/rspec/rspec-rails) 
+rspec-rails brings the RSpec testing framework to Ruby on Rails.
