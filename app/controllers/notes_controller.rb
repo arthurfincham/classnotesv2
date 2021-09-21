@@ -1,11 +1,9 @@
 class NotesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_note, only: [:edit, :update, :destroy, :show]
+  before_action :set_note, only: %i[edit update destroy show]
   before_action :set_notes
-  
-  def index
-    
-  end
+
+  def index; end
 
   def new
     @note = current_user.notes.new
@@ -21,43 +19,42 @@ class NotesController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @note.update(note_params)
       redirect_to root_path
     else
-      flash[:notice] = "note was not updated"
+      flash[:notice] = 'note was not updated'
       render 'edit'
-    end 
+    end
   end
 
-  def show
-  end
+  def show; end
 
   def destroy
     @note.destroy
-    flash[:notice] = "Note was deleted"
+    flash[:notice] = 'Note was deleted'
     redirect_to root_path
-   end
+  end
+
   private
 
   def note_params
-    params.require(:note).permit(:note_date, :note_title, :instructor, :tag_list, :partner, :pos_description, :neg_description)
+    params.require(:note).permit(:note_date, :note_title, :instructor, :tag_list, :partner, :pos_description,
+                                 :neg_description)
   end
 
   def set_notes
-    if params[:tag]
-      @notes = current_user.notes.tagged_with(params[:tag]).order(note_date: :desc)
-    else
-      @notes = current_user.notes.order(note_date: :desc)
-    end
+    @notes = if params[:tag]
+               current_user.notes.tagged_with(params[:tag]).order(note_date: :desc)
+             else
+               current_user.notes.order(note_date: :desc)
+             end
     @all_notes = current_user.notes.all
   end
 
   def set_note
     @note = Note.find(params[:id])
   end
-  
 end

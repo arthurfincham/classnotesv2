@@ -1,5 +1,4 @@
 module NotesHelper
-
   def format_date(note)
     note.note_date.strftime("#{note.note_date.day.ordinalize} %b %Y")
   end
@@ -8,24 +7,21 @@ module NotesHelper
     note.note_date.strftime("%a #{note.note_date.day.ordinalize} %b")
   end
 
-
   def table_header
     url = request.path_info
     if url.include? 'tags'
       request[:tag].parameterize(separator: '_')
     elsif url.include? 'notes/new'
-      "New Note"
+      'New Note'
     elsif url.include? 'notes' && 'edit'
       "##{@note.id}"
     else
-      "All Notes"
+      'All Notes'
     end
   end
 
   def format_title(note)
-    if note.note_title
-      note.note_title.parameterize(separator: '_').downcase
-    end
+    note.note_title.parameterize(separator: '_').downcase if note.note_title
   end
 
   def format_tags(note)
@@ -33,8 +29,4 @@ module NotesHelper
       tag.parameterize(separator: '_').downcase
     end
   end
-
-  
-
 end
-
