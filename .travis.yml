@@ -1,7 +1,7 @@
 language: ruby
 rvm: 
   - 2.7.3
-dist: xenial
+dist: trusty
 cache:
   - bundler
   - yarn
