@@ -365,6 +365,7 @@ a.nav-tag {
   margin: 0 auto;
   margin-bottom: 0;
   white-space: nowrap;
+  
 }
 
 @media only screen and (min-device-width: 760px) {
@@ -374,7 +375,26 @@ a.nav-tag {
     display: block;
     margin: 0 auto;
     text-align: center;
+    display: flex;
+  flex-direction: row;
   }
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+#dropdownMenuButton1{
+  background: none;
+  border: none;
+  font-size: 40px;
+  color: #FA7F1C;
+  padding: 0 0 0 0;
+  margin: 0 0 0 20px;
+}
+
+.btn-check:focus + .btn-secondary, .btn-secondary:focus {
+  border: none !important;
 }
 
 // Empty div to flex center title 
