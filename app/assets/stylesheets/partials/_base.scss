@@ -1,0 +1,23 @@
+body {
+  height: 100vh;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 10px;
+  padding-top: 0 !important;
+}
+
+.sign-up-page-body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #FCF2EB;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,169 @@
+// label for each input
+label {
+  font-family: 'BiotifBold';
+  color: #CACACA;
+  font-size: 1.5em;
+}
+
+#note_note_date {
+  border: none;
+  flex-direction: row-reverse;
+  padding: 5px;
+  font-size: 1.5em;
+  min-height: 10vh;
+  font-family: 'BiotifBold' !important;
+}
+
+// The actual input fields for Devise 
+#user_email, #user_password, #user_password_confirmation {
+  margin: 0;
+  width: 80vw;
+}
+
+#user_password_confirmation, #user_password {
+  margin-bottom: 18px;
+}
+
+#user_password {
+  margin-top: 15px;
+}
+
+.d-sm-inline {
+  font-family: 'BiotifBlack' !important;
+  color: black !important;
+}
+
+.d-sm-inline .px-0:hover {
+  color: black;
+  background-color: none !important;
+}
+
+.d-sm-inline .px-0 {
+  color: #FA7F1C;
+}
+
+.field, a, input {
+  font-family: 'BiotifBook' !important;
+}
+
+.form-control {
+  margin: 20px;
+}
+
+.form-check {
+  font-size: 12px;
+}
+
+// group of pos and neg descriptions 
+.form_group {
+  flex-direction: column;
+  width: 100%;
+}
+
+.form_group > * > textarea {
+  width: 100%;
+  margin: 0;
+  min-height: 20vh;
+  font-family: 'BiotifBook' !important;
+  font-size: 1.1em;
+}
+
+.form-group > textarea {
+  width: 100%;
+}
+
+@media only screen and (min-device-width :480px) {
+  .form_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .form_group > * {
+    padding: 20px;
+    text-align: left;
+    width: 50%;
+  }
+}
+
+// top 3 sections of form [date, title, instructor, partner] 
+.form_headers {
+  flex-direction: column;
+}
+
+.form_headers > * {
+  padding: 5px;
+  text-align: left;
+  width: 100%;
+}
+
+.form_headers > * > input {
+  width: 100%;
+  margin: 0;
+  min-height: 5vh;
+  font-family: 'BiotifBlack' !important;
+  font-size: 1.6em;
+}
+
+@media only screen and (min-device-width: 480px) {
+  .form_headers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .form_headers > * {
+    padding: 20px;
+    text-align: left;
+    width: 25%;
+  }
+}
+
+.note_pos_description, .note_neg_description {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media only screen and (min-device-width: 480px) {
+  .note_neg_description {
+    margin-left: 10px !important;
+  }
+}
+
+.note-form-wrapper {
+  display: flex;
+  flex-direction: column !important;
+}
+
+@media only screen and (min-device-width: 480px) {
+  .note-form-wrapper {
+    width: 80vw;
+    margin: 0 auto;
+    background-color: white;
+  }
+}
+
+// section for inputting tags 
+.tag_list_input {
+  padding: 5px 0 5px 0 !important;
+}
+
+@media only screen and (min-device-width: 480px) {
+  .tag_list_input {
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.tag_list_input > * > input {
+  margin: 0;
+  min-height: 5vh;
+  font-family: 'BiotifBold' !important;
+  font-size: 1.2em;
+}
+
+// 'Log in' / 'Sign up' text above user box 
+.user-box > h2 {
+  color: black;
+}

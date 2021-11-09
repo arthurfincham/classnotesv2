@@ -1,0 +1,77 @@
+h1, th {
+  font-family: 'BiotifBlack' !important;
+}
+
+table {
+  margin-top: 1vh;
+  margin-right: 5vw;
+}
+
+@media only screen and (min-device-width: 480px) {
+  table {
+    width: 90vw !important;
+    margin: 0 auto !important;
+    background-color: white;
+  }
+}
+
+th > h1 {
+  background-color: white;
+  color: black;
+}
+
+th {
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+td {
+  font-family: 'BiotifBook' !important;
+  vertical-align: middle;
+  line-height: 2.4vh;
+}
+
+// MOBILE SPECIFIC 
+#fixedheight-table {
+  table-layout: fixed;
+}
+
+#fixedheight-table td, #fixedheight-table td div {
+  height: 6vh;
+  min-height: 6vh;
+  overflow: hidden;
+}
+
+.index-instructor {
+  font-size: 1.2em;
+}
+
+.index-table-rows:hover {
+  background-image: asset-url('orangenoise.png') !important;
+  background-size: 100px 100px;
+  text-shadow: 0 0 14px #FFFFFF;
+}
+
+.note-partner {
+  font-size: 1em;
+}
+
+// actual title in table 'INTERMEDIATE' 
+.notetitle {
+  font-family: 'BiotifBold' !important;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.table-vert-line {
+  border-right: 1px solid rgb(214, 214, 214);
+}
+
+// styling for tags in table 
+.tag-badge {
+  margin: 0 2px 0 2px;
+  padding: 1px 2px 1px 2px;
+  border: none;
+  background-color: white;
+  font-family: 'BiotifBold';
+}

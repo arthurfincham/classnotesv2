@@ -1,0 +1,83 @@
+// Orange centered title 
+#dynamic-title {
+  font-size: 2.5em;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+@media only screen and (min-device-width: 760px) {
+  #dynamic-title {
+    font-size: 3em;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+// Empty div to flex center title 
+#emptydiv {
+  width: 47px;
+}
+
+@media only screen and (min-device-width: 480px) {
+  #emptydiv {
+    display: none !important;
+  }
+}
+
+// ClassNotes logo for Devise views 
+.classnoteslogo {
+  font-family: 'BiotifBlack' !important;
+  font-size: 4em;
+  color: black;
+}
+
+@media only screen and (min-device-width: 480px) {
+  .classnoteslogo {
+    font-size: 5em;
+  }
+  .user-box {
+    width: 30vw;
+    max-width: 500px;
+  }
+  #user_email, #user_password, #user_password_confirmation {
+    width: 30vw;
+  }
+
+  .error-box {
+    width: 30vw;
+    max-width: 500px;
+  }
+}
+
+// Gray ClassNotes title 
+.classnotestitle {
+  display: none;
+}
+
+@media only screen and (min-width: 760px) {
+  .classnotestitle {
+    font-family: 'BiotifBlack' !important;
+    display: block;
+    font-size: 2.3em;
+    color: #CBCBCB;
+    margin: 0;
+  }
+}
+
+// Replaces ClassNotes title when split screen
+.title-replacement {
+  display: none;
+}
+
+@media only screen and (max-width: 760px) {
+  .title-replacement {
+    width: 193px;
+  }
+}

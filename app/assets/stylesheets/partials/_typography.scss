@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'BiotifBlack';
+  src: asset-url('Biotif-Black.ttf');
+}
+
+@font-face {
+  font-family: 'BiotifBold';
+  src: asset-url('Biotif-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'BiotifBook';
+  src: asset-url('Biotif-Book.ttf');
+}
+
+h1 {
+  color: #FA7F1C;
+}
+
+h2 {
+  font-family: 'BiotifBold' !important;
+}
+
+h5 {
+  font-family: 'BiotifBold';
+  color: #818181;
+}

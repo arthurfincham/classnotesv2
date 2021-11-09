@@ -1,0 +1,93 @@
+a.nav-tag {
+  padding-left: 0 !important;
+}
+
+// Note related links at top of sidebar 
+.nav-top-links {
+  position: relative;
+  top: 0;
+  overflow-y: scroll;
+  line-height: 4vh;
+}
+
+// User related links at bottom of sidebar 
+.nav-bottom-links {
+  position: relative;
+  bottom: 0;
+  padding-bottom: 2vh;
+  line-height: 4vh;
+}
+
+.nav-tag a {
+  font-size: 1em;
+}
+
+// The sidebar menu 
+.sidebar {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #FCF2EB;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// The sidebar links 
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  white-space: nowrap;
+  display: inline;
+}
+
+// When you mouse over the navigation links, change their color 
+.sidebar a:hover {
+  color: #BD2727;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+.topnav {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 1vh;
+  height: 8vh;
+  background-image: asset-url('noise.png');
+  background-size: 100px 100px;
+}
+
+@media only screen and (min-device-width: 760px) {
+  .topnav {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1vh;
+    width: 100%;
+    height: 10vh;
+    margin-bottom: 3vh;
+    background-image: asset-url('noise.png');
+    background-size: 100px 100px;
+  }
+}

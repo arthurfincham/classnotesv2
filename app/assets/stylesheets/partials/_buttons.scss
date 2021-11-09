@@ -1,0 +1,96 @@
+// delete note button 
+#delete-note {
+  background-color: #FA7F1C;
+  color: white;
+  margin-top: 2vh;
+  width: auto;
+}
+
+#dropdownMenuButton1 {
+  background: none;
+  border: none;
+  font-size: 40px;
+  color: #FA7F1C;
+  padding: 0 0 0 0;
+  margin: 0 0 0 20px;
+}
+
+// note submit button 
+input.btn {
+  background-color: #FA7F1C;
+  color: white;
+  margin-top: 2vh;
+}
+
+// Position and style the close button (top right corner) 
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+// Box with submit button and devise links 
+.button-box-sign {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  line-height: 2.5vh;
+}
+
+@media only screen and (min-device-width: 480px) {
+  .button-box-sign {
+    width: 30vw;
+  }
+}
+
+.button-box-sign > * {
+  font-size: 15px;
+}
+
+.button-box-sign > input {
+  width: 100px;
+  margin: 10px 15px 20px 0;
+}
+
+// Devise shared links
+.button-box-sign > a {
+  color: #FA7F1C;
+}
+
+.button-box-sign > a:hover {
+  color: black;
+}
+
+// The button used to open the sidebar 
+.openbtn {
+  font-size: 30px;
+  cursor: pointer;
+  color: black;
+  padding: 10px;
+  border: none;
+  background: none;
+  padding-top: 5px;
+}
+
+@media only screen and (min-device-width: 480px) {
+  .openbtn {
+    font-size: 40px;
+    cursor: pointer;
+    color: black;
+    padding: 10px;
+    border: none;
+    background: none;
+    padding-top: 5px;
+    margin-right: 140px;
+  }
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.btn-check:focus + .btn-secondary, .btn-secondary:focus {
+  border: none !important;
+}
