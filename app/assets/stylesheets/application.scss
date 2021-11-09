@@ -13,8 +13,56 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap/scss/bootstrap";
+@import 'bootstrap/scss/bootstrap';
 
+@font-face {
+  font-family: 'BiotifBlack';
+  src: asset-url('Biotif-Black.ttf');
+}
+
+@font-face {
+  font-family: 'BiotifBold';
+  src: asset-url('Biotif-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'BiotifBook';
+  src: asset-url('Biotif-Book.ttf');
+}
+
+/* #region  TYPOGRAPHY */
+
+
+ul, li {
+  list-style-type: none;
+}
+
+.field, a, input {
+  font-family: 'BiotifBook' !important;
+}
+
+h5 {
+  font-family: 'BiotifBold';
+  color: #818181;
+}
+
+h1, th {
+  font-family: 'BiotifBlack' !important;
+}
+
+th > h1 {
+  background-color: white;
+  color: black;
+}
+
+h2 {
+  font-family: 'BiotifBold' !important;
+}
+
+h1 {
+  color: #FA7F1C;
+}
+/* #endregion */
 
 .d-sm-inline {
   font-family: 'BiotifBlack' !important;
@@ -40,14 +88,13 @@
 }
 
 
-
 /* #region  GENERAL */
 body {
   height: 100vh;
 }
 
 #main {
-  transition: margin-left .5s;
+  transition: margin-left 0.5s;
   padding: 10px;
   padding-top: 0 !important;
 }
@@ -91,9 +138,9 @@ td {
 }
 
 .index-table-rows:hover {
-  background-image: asset-url("orangenoise.png") !important;
+  background-image: asset-url('orangenoise.png') !important;
   background-size: 100px 100px;
-  text-shadow: 0px 0px 14px #ffffff;
+  text-shadow: 0 0 14px #FFFFFF;
 }
 
 // actual title in table 'INTERMEDIATE' 
@@ -173,7 +220,7 @@ td {
 // When you mouse over the navigation links, change their color 
 
 .sidebar a:hover {
-  color: #bd2727;
+  color: #BD2727;
 }
 
 // Position and style the close button (top right corner) 
@@ -237,7 +284,7 @@ a.nav-tag {
 
 // 'Log in' / 'Sign up' text above user box 
 
-.user-box>h2 {
+.user-box > h2 {
   color: black;
 }
 
@@ -252,7 +299,7 @@ a.nav-tag {
   margin-bottom: 18px;
 }
 
- #user_password {
+#user_password {
   margin-top: 15px;
 }
 
@@ -265,21 +312,21 @@ a.nav-tag {
   line-height: 2.5vh;
 }
 
-.button-box-sign>* {
+.button-box-sign > * {
   font-size: 15px;
 }
 
-.button-box-sign>input {
+.button-box-sign > input {
   width: 100px;
   margin: 10px 15px 20px 0;
 }
 // Devise shared links
 
-.button-box-sign>a {
+.button-box-sign > a {
   color: #FA7F1C;
 }
 
-.button-box-sign>a:hover {
+.button-box-sign > a:hover {
   color: black;
 }
 
@@ -313,7 +360,7 @@ a.nav-tag {
   justify-content: space-between;
   padding-top: 1vh;
   height: 8vh;
-  background-image: asset-url("noise.png");
+  background-image: asset-url('noise.png');
   background-size: 100px 100px;
 }
 
@@ -328,7 +375,7 @@ a.nav-tag {
     width: 100%;
     height: 10vh;
     margin-bottom: 3vh;
-    background-image: asset-url("noise.png");
+    background-image: asset-url('noise.png');
     background-size: 100px 100px;
   }
 }
@@ -365,7 +412,6 @@ a.nav-tag {
   margin: 0 auto;
   margin-bottom: 0;
   white-space: nowrap;
-  
 }
 
 @media only screen and (min-device-width: 760px) {
@@ -376,15 +422,15 @@ a.nav-tag {
     margin: 0 auto;
     text-align: center;
     display: flex;
-  flex-direction: row;
+    flex-direction: row;
   }
 }
 
 .dropdown-toggle::after {
-    display: none;
+  display: none;
 }
 
-#dropdownMenuButton1{
+#dropdownMenuButton1 {
   background: none;
   border: none;
   font-size: 40px;
@@ -459,13 +505,13 @@ a.nav-tag {
   flex-direction: column;
 }
 
-.form_headers>* {
+.form_headers > * {
   padding: 5px;
   text-align: left;
   width: 100%;
 }
 
-.form_headers>*>input {
+.form_headers > * > input {
   width: 100%;
   margin: 0;
   min-height: 5vh;
@@ -480,7 +526,7 @@ a.nav-tag {
     justify-content: space-between;
     align-items: center;
   }
-  .form_headers>* {
+  .form_headers > * {
     padding: 20px;
     text-align: left;
     width: 25%;
@@ -493,7 +539,7 @@ a.nav-tag {
   padding: 5px 0 5px 0 !important;
 }
 
-.tag_list_input>*>input {
+.tag_list_input > * > input {
   margin: 0;
   min-height: 5vh;
   font-family: 'BiotifBold' !important;
@@ -515,7 +561,7 @@ a.nav-tag {
   width: 100%;
 }
 
-.form_group>*>textarea {
+.form_group > * > textarea {
   width: 100%;
   margin: 0;
   min-height: 20vh;
@@ -523,7 +569,7 @@ a.nav-tag {
   font-size: 1.1em;
 }
 
-.form-group>textarea {
+.form-group > textarea {
   width: 100%;
 }
 
@@ -533,7 +579,7 @@ a.nav-tag {
     flex-direction: row;
     justify-content: space-between;
   }
-  .form_group>* {
+  .form_group > * {
     padding: 20px;
     text-align: left;
     width: 50%;
@@ -564,7 +610,7 @@ a.nav-tag {
 // label for each input
 label {
   font-family: 'BiotifBold';
-  color: #cacaca;
+  color: #CACACA;
   font-size: 1.5em;
 }
 
@@ -583,53 +629,5 @@ input.btn {
   color: white;
   margin-top: 2vh;
   width: auto;
-}
-/* #endregion */
-
-/* #region  TYPOGRAPHY */
-
-@font-face {
-  font-family: 'BiotifBlack';
-  src: asset-url('Biotif-Black.ttf');
-}
-
-@font-face {
-  font-family: 'BiotifBold';
-  src: asset-url('Biotif-Bold.ttf');
-}
-
-@font-face {
-  font-family: 'BiotifBook';
-  src: asset-url('Biotif-Book.ttf');
-}
-
-ul, li {
-  list-style-type: none;
-}
-
-.field, a, input {
-  font-family: 'BiotifBook' !important;
-}
-
-h5 {
-  font-family: "BiotifBold";
-  color: #818181;
-}
-
-h1, th {
-  font-family: 'BiotifBlack' !important;
-}
-
-th>h1 {
-  background-color: white;
-  color: black;
-}
-
-h2 {
-  font-family: 'BiotifBold' !important;
-}
-
-h1 {
-  color: #FA7F1C;
 }
 /* #endregion */
