@@ -38,4 +38,5 @@ yarn-debug.log*
 vendor/bundle/
 /tmp.env
 .env
-md_preview.css
+md_preview.csscoverage
+coverage/

@@ -1,34 +1,31 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Note, type: :model do
-  it 'is not valid without a user_id' do
-    note = Note.new(note_date: '2021-10-11')
-    expect(note).not_to be_valid
+  describe '#validations' do
+    it { should validate_presence_of(:note_title) }
+    it { should validate_presence_of(:note_date) }
+    it { should validate_presence_of(:user_id) }
+    it 'is valid with valid attributes' do
+      note = create(:note)
+      expect(note).to be_valid
+    end
   end
 
-  it 'is not valid without a date' do
-    note = Note.new(user_id: 2)
-    expect(note).not_to be_valid
-  end
+  describe '#tags' do
+    before do
+      @note = create(:note)
+      @note.tag_list.add('test_tag')
+    end
 
-  it 'is not valid without a title' do
-    note = Note.new(note_date: '2021-10-11', user_id: 2)
-    expect(note).not_to be_valid
-  end
+    it 'can take tags' do
+      expect(@note.tag_list).to include('test_tag')
+    end
 
-  it 'is valid with id, date and title of correct length' do
-    note = Note.new(note_date: '2021-10-11', user_id: 2, note_title: 'intermediate')
-    expect(note).to be_valid
-  end
-
-  it 'is not valid with a title > 14 chars' do
-    note = Note.new(note_date: '2021-10-11', user_id: 2, note_title: 'intermediate class')
-    expect(note).not_to be_valid
-  end
-
-  it 'accepts tags' do
-    note = Note.new(note_date: '2021-10-11', user_id: 2, note_title: 'intermediate')
-    note.tag_list.add('awesome, slick')
-    expect(note.tag_list).to eq ['awesome, slick']
+    it 'can have a tag removed' do
+      @note.tag_list.remove('test_tag')
+      expect(@note.tag_list).to_not include('test_tag')
+    end
   end
 end
