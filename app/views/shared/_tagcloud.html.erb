@@ -5,7 +5,7 @@
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     <% @all_notes.tag_counts.order("tags.name").each do |tag| %>
      <li class="nav-item">
-       <%= link_to "##{tag.name.parameterize(separator: '_')}", tag_path(tag.name), class: "nav-tag" %></li>
+       <%= tag %></li>
      <% end %>
   </ul>
 </div>
